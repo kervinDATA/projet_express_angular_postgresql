@@ -5,10 +5,17 @@
 <!-- Bouton pour afficher toute la table -->
 <button (click)="afficherTable()">Afficher toute la table</button>
 
-<!-- Input pour entrer le numéro du département -->
+<!-- Liste déroulante pour choisir un département -->
 <div>
-  <label for="departement">Afficher les restaurants du département :</label>
-  <input type="text" id="departement" [(ngModel)]="departement" placeholder="Entrez le numéro du département">
+  <label for="departement">Choisissez un département :</label>
+  <select id="departement" [(ngModel)]="departement">
+    <option value="" disabled selected>Sélectionner un département</option>
+    <option value="75">Paris (75)</option>
+    <option value="92">Hauts-de-Seine (92)</option>
+    <option value="93">Seine-Saint-Denis (93)</option>
+    <option value="94">Val-de-Marne (94)</option>
+    <!-- Ajouter plus de départements si nécessaire -->
+  </select>
   <button (click)="afficherParDepartement()">Filtrer par département</button>
 </div>
 

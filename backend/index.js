@@ -23,10 +23,20 @@ const pool = new Pool({
   port: process.env.PGPORT,
 });
 
-// Route pour récupérer toutes les données de la table "restauration"
+// Route pour récupérer toute la table "restauration"
 app.get('/restauration', async (req, res) => {
+  const departement = req.query.departement;  // Récupérer le paramètre de département s'il existe
+
   try {
-    const result = await pool.query('SELECT * FROM restauration');
+    let query = 'SELECT * FROM restauration';
+    let values = [];
+
+    if (departement) {
+      query += ' WHERE code_postal LIKE $1';
+      values.push(`${departement}%`);  // Filtrer par département (par exemple "75" pour Paris)
+    }
+
+    const result = await pool.query(query, values);
     res.json(result.rows);
   } catch (err) {
     console.error(err);

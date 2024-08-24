@@ -1,7 +1,21 @@
 <h1>{{ title }}</h1>
 
-<ul>
+<p>Bienvenue sur Kervin Connection BDD !</p>
+
+<!-- Bouton pour afficher toute la table -->
+<button (click)="afficherTable()">Afficher toute la table</button>
+
+<!-- Input pour entrer le numéro du département -->
+<div>
+  <label for="departement">Afficher les restaurants du département :</label>
+  <input type="text" id="departement" [(ngModel)]="departement" placeholder="Entrez le numéro du département">
+  <button (click)="afficherParDepartement()">Filtrer par département</button>
+</div>
+
+<!-- Affichage des données -->
+<ul *ngIf="restaurations.length > 0">
   <li *ngFor="let restauration of restaurations">
     {{ restauration.nom }} - {{ restauration.type }} - {{ restauration.ville }} - {{ restauration.code_postal }} - {{ restauration.prix }}
   </li>
 </ul>
+

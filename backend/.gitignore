@@ -1,0 +1,33 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Build output directories (si applicable)
+dist/
+tmp/
+coverage/
+
+# Environment files
+.env
+
+# Docker-related files
+db/data
+Dockerfile
+docker-compose.override.yml
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.settings/
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db

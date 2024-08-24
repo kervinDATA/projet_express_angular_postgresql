@@ -1,0 +1,45 @@
+# Angular specific
+/angular.json
+/.angular/cache
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Dependency directories
+/node_modules
+
+# Log files
+npm-debug.log*
+yarn-error.log*
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Miscellaneous
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+

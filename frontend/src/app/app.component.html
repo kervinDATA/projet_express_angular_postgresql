@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+
+<ul>
+  <li *ngFor="let restauration of restaurations">
+    {{ restauration.nom }} - {{ restauration.type }} - {{ restauration.ville }} - {{ restauration.code_postal }} - {{ restauration.prix }}
+  </li>
+</ul>
